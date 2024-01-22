@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "986435409367",
+    "project_id": "home-bakery-fcda6",
+    "storage_bucket": "home-bakery-fcda6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986435409367:android:675a753c491cbd7bf82792",
+        "android_client_info": {
+          "package_name": "com.curso.homebakery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986435409367-9n5sf6el9net7eqbnism0tt6rcmq5mfa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.curso.homebakery",
+            "certificate_hash": "37b64fcc4814a09037b77e4f2cfd2d0e5779ba2f"
+          }
+        },
+        {
+          "client_id": "986435409367-v7vrh6n8kt452bof1vik7eqaqehnc7qg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo5o-AroRVsiojGX3hkTFFQUZoAaSnmoQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986435409367-v7vrh6n8kt452bof1vik7eqaqehnc7qg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
