@@ -1,4 +1,14 @@
 package com.curso.homebakery
 
-class RecetaRepository {
+import androidx.lifecycle.LiveData
+
+class RecetaRepository(private val recetaDao: RecetaDao) {
+
+    val todasLasRecetas: LiveData<List<Receta>> = recetaDao.getAll()
+
+    suspend fun insertar(receta: Receta) {
+        recetaDao.insert(receta)
+    }
+
+    // Puedes agregar más métodos según sea necesario, como update, delete, etc.
 }

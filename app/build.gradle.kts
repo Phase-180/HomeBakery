@@ -1,9 +1,10 @@
-
-
 plugins {
+
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
+    id("kotlin-kapt")
+
 }
 
 android {
@@ -43,7 +44,20 @@ android {
 }
 
 dependencies {
+    val room_version = "2.2.5"
+    implementation ("androidx.room:room-runtime:$room_version")
+    annotationProcessor ("androidx.room:room-compiler:$room_version")
+// To use Kotlin annotation processing tool (kapt)
+    implementation ("androidx.room:room-ktx:2.2.5")
+    kapt ("androidx.room:room-compiler:2.2.5")
 
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
+    // optional - Paging 3 Integration
+    implementation("androidx.room:room-paging:$room_version")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")

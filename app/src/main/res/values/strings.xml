@@ -2,4 +2,9 @@
     <string name="app_name">Home Bakery</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="flour_weight_format">Peso de la harina: %1$s g</string>
+    <string name="water_percentage_format">Porcentaje de agua: %1$s%%</string>
+    <string name="salt_percentage_format">Porcentaje de sal: %1$s%%</string>
+    <string name="yeast_percentage_format">Porcentaje de levadura/masa madre: %1$s%%</string>
+
 </resources>
