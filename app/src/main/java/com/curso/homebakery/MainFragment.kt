@@ -1,13 +1,11 @@
 package com.curso.homebakery
 
 import RecetaViewModel
-import RecetasAdapter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -37,8 +35,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         // Configuración del RecyclerView
         recyclerView =
-            view.findViewById(R.id.recyclerView) // Asegúrate de que el ID coincide con tu layout
-        adapter = RecetasAdapter()
+            view.findViewById(R.id.recyclerView) // Asegurar de que el ID coincida con el layout
+        adapter = RecetasAdapter(::clickBorrarReceta, ::clickVerReceta, ::clickEditarReceta)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
@@ -47,5 +45,23 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             // Actualizar el adaptador con la nueva lista de recetas
             adapter.submitList(recetas.toList())
         }
+    }
+
+    private fun clickBorrarReceta(receta: Receta){
+        viewModel.borrarReceta(receta)
+    }
+
+    private fun clickVerReceta(receta: Receta){
+        val bundle = Bundle()
+        bundle.putParcelable("receta", receta)
+        bundle.putString("type", RecetaViewType.TYPE_READ_ONLY.value)
+        findNavController().navigate(R.id.segundoFragment, bundle)
+    }
+
+    private fun clickEditarReceta(receta: Receta){
+        val bundle = Bundle()
+        bundle.putParcelable("receta", receta)
+        bundle.putString("type", RecetaViewType.TYPE_UPDATE.value)
+        findNavController().navigate(R.id.segundoFragment, bundle)
     }
 }

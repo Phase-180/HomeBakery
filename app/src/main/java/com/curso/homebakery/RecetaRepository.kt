@@ -10,5 +10,13 @@ class RecetaRepository(private val recetaDao: RecetaDao) {
         recetaDao.insert(receta)
     }
 
-    // Puedes agregar más métodos según sea necesario, como update, delete, etc.
+    suspend fun update(receta: Receta) {
+        recetaDao.update(receta)
+    }
+
+    suspend fun delete(receta: Receta) {
+        recetaDao.delete(receta)
+    }
+
+
 }

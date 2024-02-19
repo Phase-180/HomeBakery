@@ -8,17 +8,18 @@
     tools:context=".CrearCuenta">
 
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#9AFFFFFF"
         android:text="Crear la receta"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:background="#9AFFFFFF"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cardRecycle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/cardRecycle"></TextView>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
     <androidx.cardview.widget.CardView
         android:id="@+id/cardRecycle"
         android:layout_width="wrap_content"
@@ -127,6 +128,29 @@
                 android:ems="10"
                 android:hint="Masa Madre %"
                 android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Categoria"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"></TextView>
+
+
+            <EditText
+                android:id="@+id/etCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Categoria"
+                android:inputType="number" />
+            <Spinner
+                android:id="@+id/spinnerCategorias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
 
             <Button
